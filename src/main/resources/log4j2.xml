@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug" >
+
+
+<!--    <Appenders>-->
+<!--        <Console name="LogToConsole" target="SYSTEM_OUT">-->
+<!--            <PatternLayout>-->
+<!--                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %d %-5p %m%nw</Pattern>-->
+<!--            </PatternLayout>-->
+<!--        </Console>-->
+<!--    </Appenders>-->
+    <Appenders>
+        <File name="LogToFile" fileName="logs.log" append="true">
+            <PatternLayout>
+                <Pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+    <Root level="info">
+<!--        <AppenderRef ref="LogToConsole"/>-->
+        <AppenderRef ref="LogToFile"/>
+    </Root>
+</Loggers>
+
+</Configuration>
+
